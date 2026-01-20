@@ -1,0 +1,335 @@
+
+ 📘 PYTHON DATA STRUCTURES — USE CASES WITH PROBLEM STATEMENTS
+
+ 1️⃣ Lists (Mutable)
+
+  Use Case 1: Employee Attendance
+
+Problem Statement:
+HR needs to store daily attendance of employees where new employees can be added and absentees can be removed dynamically.
+
+
+
+  Use Case 2: Shopping Cart System
+
+Problem Statement:
+An e-commerce application must allow users to add, remove, and update items in their cart before checkout.
+
+
+
+  Use Case 3: Student Marks Entry
+
+Problem Statement:
+A training institute needs to continuously update students’ marks after re-evaluation.
+
+
+
+  Use Case 4: Order Processing Queue (Temporary Storage)
+
+Problem Statement:
+Orders received from customers must be stored temporarily before final confirmation.
+
+
+
+ 2️⃣ Tuples (Immutable)
+
+  Use Case 1: Application Configuration
+
+Problem Statement:
+Database credentials must remain constant throughout application execution and should not be modified accidentally.
+
+
+
+  Use Case 2: Fixed Coordinates
+
+Problem Statement:
+GPS coordinates of company branch locations should not change once stored.
+
+
+
+  Use Case 3: Days of the Week
+
+Problem Statement:
+The system should use a fixed list of weekdays for scheduling reports.
+
+
+
+  Use Case 4: API Response Structure
+
+Problem Statement:
+Certain APIs return fixed-format data which should remain unchanged during processing.
+
+
+
+ 3️⃣ Set / Frozenset
+
+  Use Case 1: Remove Duplicate Email IDs
+
+Problem Statement:
+Marketing team receives customer email data with duplicates and must extract unique email IDs.
+
+
+
+  Use Case 2: User Roles Management
+
+Problem Statement:
+An enterprise system must ensure that a user cannot have duplicate access roles.
+
+
+
+  Use Case 3: Permission Validation (Frozenset)
+
+Problem Statement:
+Predefined admin permissions should not be altered at runtime.
+
+
+
+  Use Case 4: Compare Two Databases
+
+Problem Statement:
+Find common and different employee IDs between two systems after migration.
+
+
+
+ 4️⃣ Dictionary (Mutable)
+
+  Use Case 1: Employee Master Data
+
+Problem Statement:
+HR needs fast access to employee details using employee ID.
+
+
+
+  Use Case 2: Login Authentication
+
+Problem Statement:
+System must map usernames with passwords for authentication.
+
+
+
+  Use Case 3: Product Price Mapping
+
+Problem Statement:
+An online store must instantly fetch price using product code.
+
+
+
+  Use Case 4: API JSON Response Handling
+
+Problem Statement:
+Backend services must process JSON responses received from third-party APIs.
+
+
+
+ 5️⃣ Strings (Immutable)
+
+  Use Case 1: Username Validation
+
+Problem Statement:
+Usernames should not change once registered.
+
+
+
+  Use Case 2: Log Messages
+
+Problem Statement:
+System logs must remain unchanged to ensure audit compliance.
+
+
+
+  Use Case 3: Email Processing
+
+Problem Statement:
+Application must validate and process email IDs entered by users.
+
+
+
+  Use Case 4: Password Masking
+
+Problem Statement:
+Passwords must be processed securely without modifying original strings.
+
+
+
+ 6️⃣ Matrix (2D List)
+
+  Use Case 1: Student Marks Sheet
+
+Problem Statement:
+Store marks of multiple students across multiple subjects.
+
+
+
+  Use Case 2: Seating Arrangement
+
+Problem Statement:
+Arrange employees floor-wise and desk-wise in office layout.
+
+
+
+  Use Case 3: Image Pixel Processing
+
+Problem Statement:
+Image data must be processed pixel by pixel.
+
+
+
+  Use Case 4: Sales Report Table
+
+Problem Statement:
+Monthly sales must be stored in tabular row–column format.
+
+
+
+ 7️⃣ Linked List
+
+  Use Case 1: Music Playlist
+
+Problem Statement:
+Users should navigate songs forward and backward dynamically.
+
+
+
+  Use Case 2: Browser Navigation
+
+Problem Statement:
+Web browsers must allow back and forward navigation between pages.
+
+
+
+  Use Case 3: Undo / Redo Feature
+
+Problem Statement:
+Text editors must store changes dynamically for undo and redo operations.
+
+
+
+  Use Case 4: Memory Management
+
+Problem Statement:
+Applications need efficient insert and delete operations without shifting elements.
+
+
+
+ 8️⃣ Stack (LIFO)
+
+  Use Case 1: Undo Operation
+
+Problem Statement:
+Recent changes must be undone first.
+
+
+
+  Use Case 2: Function Call Stack
+
+Problem Statement:
+Program execution must remember which function called which.
+
+
+
+  Use Case 3: Expression Evaluation
+
+Problem Statement:
+Arithmetic expressions must be evaluated following correct precedence.
+
+
+
+  Use Case 4: Browser Back Button
+
+Problem Statement:
+User must return to previously visited pages in reverse order.
+
+
+
+ 9️⃣ Queue (FIFO)
+
+  Use Case 1: Printer Queue
+
+Problem Statement:
+Print jobs must be processed in the order they are received.
+
+
+
+  Use Case 2: Customer Support Tickets
+
+Problem Statement:
+Support requests must be handled on a first-come-first-serve basis.
+
+
+
+  Use Case 3: Task Scheduling
+
+Problem Statement:
+Background jobs must be executed sequentially.
+
+
+
+  Use Case 4: Online Booking System
+
+Problem Statement:
+Users waiting for tickets must be served in order.
+
+
+
+ 🔟 Tries & Graphs
+
+
+
+ 🌳 Trie
+
+  Use Case 1: Search Auto-Complete
+
+Problem Statement:
+Search box must suggest words as the user types.
+
+
+
+  Use Case 2: Dictionary Validation
+
+Problem Statement:
+Check whether entered word exists in dictionary.
+
+
+
+  Use Case 3: Spell Checker
+
+Problem Statement:
+Identify incorrect spellings in documents.
+
+
+
+  Use Case 4: Contact Search
+
+Problem Statement:
+Search contacts quickly using name prefixes.
+
+
+
+ 🌐 Graph
+
+  Use Case 1: Social Network Connections
+
+Problem Statement:
+Find mutual friends and connections.
+
+
+
+  Use Case 2: Route Optimization
+
+Problem Statement:
+Find shortest path between two locations.
+
+
+
+  Use Case 3: Network Topology
+
+Problem Statement:
+Monitor connectivity between servers.
+
+
+
+  Use Case 4: Recommendation Systems
+
+Problem Statement:
+Recommend products based on user behavior graph.
+
