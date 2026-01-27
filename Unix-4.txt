@@ -1,0 +1,210 @@
+UNIX DAY-1 ASSESSMENT
+PART A – MCQs (20 Questions)
+
+### 1️⃣ What is the full form of `pwd`?
+
+A. Print Working Directory
+B. Present Working Directory
+C. Program Working Directory
+D. Public Working Directory
+
+---
+
+### 2️⃣ Which command shows your current location in Unix?
+
+A. ls
+B. cd
+C. pwd
+D. touch
+
+---
+
+### 3️⃣ Which command lists files in a directory?
+
+A. list
+B. show
+C. ls
+D. dir
+
+---
+
+### 4️⃣ What does `mkdir` do?
+
+A. Deletes directory
+B. Creates directory
+C. Opens directory
+D. Copies directory
+
+---
+
+### 5️⃣ What is the full form of `cd`?
+
+A. Create Directory
+B. Change Directory
+C. Copy Directory
+D. Current Directory
+
+---
+
+### 6️⃣ Which command is used to move inside a folder?
+
+A. ls
+B. pwd
+C. cd
+D. cat
+
+---
+
+### 7️⃣ Which command creates an empty file?
+
+A. file
+B. new
+C. touch
+D. open
+
+---
+
+### 8️⃣ What does `cat` command do?
+
+A. Create file
+B. Copy file
+C. Display file content
+D. Delete file
+
+---
+
+### 9️⃣ What is the full form of `cat`?
+
+A. Capture
+B. Concatenate
+C. Calculate
+D. Category
+
+---
+
+### 🔟 What does this command do?
+
+```bash
+echo "Hello" >> test.txt
+```
+
+A. Deletes file
+B. Overwrites file
+C. Appends data to file
+D. Renames file
+
+---
+
+### 1️⃣1️⃣ What does `>>` symbol mean?
+
+A. Replace
+B. Append
+C. Delete
+D. Execute
+
+---
+
+### 1️⃣2️⃣ Which directory symbol represents home directory?
+
+A. /
+B. .
+C. ..
+D. ~
+
+---
+
+### 1️⃣3️⃣ If your prompt shows:
+
+```
+~/unix_training
+```
+
+You are currently inside:
+
+A. Root directory
+B. Home directory
+C. unix_training folder inside home
+D. Desktop
+
+---
+
+### 1️⃣4️⃣ Which symbol represents normal user?
+
+A. #
+B. @
+C. $
+D. %
+
+---
+
+### 1️⃣5️⃣ Which symbol represents root user?
+
+A. $
+B. %
+C. #
+D. @
+
+---
+
+### 1️⃣6️⃣ Which command is used to create a folder named `project`?
+
+A. touch project
+B. mkdir project
+C. cd project
+D. ls project
+
+---
+
+### 1️⃣7️⃣ Which command shows files with details?
+
+A. ls
+B. ls -l
+C. ll
+D. pwd
+
+---
+
+### 1️⃣8️⃣ Which command is used to read file content?
+
+A. echo
+B. touch
+C. cat
+D. cd
+
+---
+
+### 1️⃣9️⃣ Which command shows Unix manual/help?
+
+A. help
+B. info
+C. man
+D. guide
+
+---
+
+### 2️⃣0️⃣ Unix is mainly used in:
+
+A. Gaming
+B. Embedded systems & servers
+C. Paint applications
+D. Word processing
+
+PART B – Practical (Optional / Viva)
+
+explain:
+
+1️⃣ Difference between `pwd` and `ls`
+2️⃣ Difference between file and directory
+3️⃣ What happens if folder already exists and we run `mkdir` again?
+4️⃣ Explain meaning of this path:
+
+```
+/home/sari/unix_training
+```
+
+---
+
+
+
+> “Today WE LEARNT how to talk to Linux.
+> From tomorrow, WE will start controlling it.”

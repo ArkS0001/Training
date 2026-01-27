@@ -1,0 +1,181 @@
+USE CASE 1 – LOG FILE MANAGEMENT
+
+Goal: Navigate folders, read logs, search for errors, sort logs, compress and archive them.
+
+---
+
+ STEP 0: Open MobaXterm
+
+ Double-click `MobaXterm_Personal_25.4.exe`
+ Wait for Local Terminal to open
+ You should see prompt like:
+
+
+┌──(sari㉿DESKTOP-CQEJB26)-[~]
+└─$
+
+
+This is your home directory (`/home/sari`).
+
+---
+
+ STEP 1: Create a simulated log folder
+
+bash
+mkdir log_demo
+cd log_demo
+
+
+ `mkdir log_demo` → create folder for logs
+ `cd log_demo` → go inside the folder
+ Prompt changes to:
+
+
+~/log_demo
+$
+
+
+---
+
+ STEP 2: Create sample log files
+
+bash
+echo "INFO: Server started" >> system.log
+echo "ERROR: DB connection failed" >> system.log
+echo "WARNING: High memory usage" >> system.log
+echo "INFO: User logged in" >> system.log
+echo "ERROR: Disk space low" >> system.log
+
+
+ `>>` → appends to the file (creates if not exists)
+ `system.log` → simulated server log
+
+Check file exists:
+
+bash
+ls -l
+
+
+Expected output:
+
+
+-rw-r--r-- 1 sari users 123 Jan 26 10:00 system.log
+
+
+---
+
+ STEP 3: View last 3 log entries
+
+bash
+tail -n 3 system.log
+
+
+Expected output:
+
+
+WARNING: High memory usage
+INFO: User logged in
+ERROR: Disk space low
+
+
+---
+
+ STEP 4: Search for ERROR logs
+
+bash
+grep ERROR system.log
+
+
+Output:
+
+
+ERROR: DB connection failed
+ERROR: Disk space low
+
+
+---
+
+ STEP 5: Sort log entries alphabetically
+
+bash
+sort system.log
+
+
+Output (sorted lines):
+
+
+ERROR: DB connection failed
+ERROR: Disk space low
+INFO: Server started
+INFO: User logged in
+WARNING: High memory usage
+
+
+---
+
+ STEP 6: Compare two logs using diff
+
+(Optional: create another log)
+
+bash
+echo "INFO: Server started" >> system2.log
+echo "ERROR: Disk space low" >> system2.log
+diff system.log system2.log
+
+
+ Shows differences between files
+
+---
+
+ STEP 7: Compress old log file
+
+bash
+gzip system2.log
+ls -l
+
+
+ Creates `system2.log.gz`
+ Old file removed, compressed file exists
+
+---
+
+ STEP 8: Archive all logs
+
+bash
+tar -cvf logs_archive.tar .log .gz
+ls -l
+
+
+ `tar -cvf` → create archive
+ `.log .gz` → include all log files
+ You now have `logs_archive.tar` containing all logs
+
+---
+
+ ✅ STEP 9: Optional – Extract archive
+
+bash
+tar -xvf logs_archive.tar
+ls -l
+
+
+ Extracts archived logs
+ Useful to verify contents
+
+
+ SUMMARY OF COMMAND FLOW
+
+| STEP | Command                              | Purpose                  |
+
+| 1    | mkdir log_demo & cd log_demo         | Create folder for logs   |
+| 2    | echo … >> system.log                 | Create sample logs       |
+| 3    | tail -n 3 system.log                 | View last 3 entries      |
+| 4    | grep ERROR system.log                | Search for ERROR logs    |
+| 5    | sort system.log                      | Sort logs alphabetically |
+| 6    | diff system.log system2.log          | Compare two log files    |
+| 7    | gzip system2.log                     | Compress log             |
+| 8    | tar -cvf logs_archive.tar .log .gz | Archive logs             |
+| 9    | tar -xvf logs_archive.tar            | Extract logs             |
+
+
+This simulates exactly what you would do on a real server in a corporate environment, like Volkswagen, but safely in MobaXterm local terminal.

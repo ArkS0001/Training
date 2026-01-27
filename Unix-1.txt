@@ -1,0 +1,435 @@
+
+
+ 1️⃣ INTRODUCTION TO UNIX
+
+ What is Unix?
+
+Unix is an operating system used mainly for:
+
+ Servers
+ Production systems
+ Cloud platforms
+ Automotive backend systems
+
+🔹 Very stable
+🔹 Multi-user
+🔹 Multi-tasking
+
+ Most Volkswagen backend applications run on Linux/Unix servers.
+
+---
+
+ 2️⃣ HISTORY OF UNIX
+
+ Developed in 1969 at Bell Labs
+ Created by Ken Thompson & Dennis Ritchie
+ Written in C language
+ Parent OS of:
+
+   Linux
+   AIX
+   Solaris
+   HP-UX
+
+💡 Linux is Unix-like (same commands, same concepts).
+
+---
+
+ 3️⃣ OVERVIEW OF UNIX
+
+ Key Characteristics
+
+ Multi-user system
+ Multi-tasking
+ Portable
+ Secure
+ Command-line based
+
+ Why companies like Volkswagen use Unix?
+
+ 99.9% uptime
+ Strong security
+ Easy automation using shell scripts
+ Works perfectly for microservices & backend systems
+
+---
+
+ 4️⃣ ADDITIONAL FEATURES OF UNIX
+
+✅ Process management
+✅ Memory management
+✅ File permissions
+✅ Remote access (SSH)
+✅ Log handling
+✅ Automation (cron jobs)
+
+---
+
+ 5️⃣ GETTING STARTED WITH UNIX
+
+ Ways to access Unix
+
+ Putty
+ MobaXterm
+ Terminal
+ Cloud VM (AWS / Azure)
+
+ Unix prompt example:
+
+bash
+[vwuser@server01 ~]$
+
+
+ `vwuser` → username
+ `server01` → server name
+ `~` → home directory
+
+---
+
+ 6️⃣ BASIC UNIX COMMANDS
+
+---
+
+ 📁 ls — list files
+
+bash
+ls
+ls -l
+ls -a
+
+
+| Option | Meaning      |
+| ------ | ------------ |
+| -l     | long format  |
+| -a     | hidden files |
+
+---
+
+ 📄 cat — view file
+
+bash
+cat file.txt
+
+
+Used for log viewing.
+
+---
+
+ 🔝 head / tail
+
+bash
+head file.txt
+tail file.txt
+tail -f app.log
+
+
+ `tail -f` used heavily in Volkswagen for live logs.
+
+---
+
+ 📂 pwd — present directory
+
+bash
+pwd
+
+
+---
+
+ 📁 cd — change directory
+
+bash
+cd folder
+cd ..
+cd ~
+
+
+---
+
+ 📁 mkdir / rmdir
+
+bash
+mkdir test
+rmdir test
+
+
+---
+
+ 🧹 rm — delete
+
+bash
+rm file.txt
+rm -r folder
+
+
+⚠ Dangerous command — use carefully.
+
+---
+
+ 📋 cp — copy
+
+bash
+cp a.txt b.txt
+cp -r dir1 dir2
+
+
+---
+
+ 🔁 mv — move / rename
+
+bash
+mv old.txt new.txt
+
+
+---
+
+ 📄 touch — create file
+
+bash
+touch test.txt
+
+
+---
+
+ 🔍 grep — search text
+
+bash
+grep "ERROR" app.log
+
+
+Used daily in production.
+
+---
+
+ 🔎 find — search files
+
+bash
+find /var/log -name ".log"
+
+
+---
+
+ 📍 locate
+
+bash
+locate passwd
+
+
+Fast file search (uses database).
+
+---
+
+ 🔃 sort
+
+bash
+sort names.txt
+
+
+---
+
+ 📄 diff — compare files
+
+bash
+diff file1 file2
+
+
+Used in deployment verification.
+
+---
+
+ 📄 file — check file type
+
+bash
+file script.sh
+
+
+---
+
+ 📘 man — help
+
+bash
+man ls
+
+
+---
+
+ 7️⃣ UNIX FILE SYSTEM
+
+ Root structure
+
+| Directory | Purpose      |
+
+| /         | root         |
+| /home     | user home    |
+| /etc      | config files |
+| /var      | logs         |
+| /bin      | commands     |
+| /tmp      | temporary    |
+| /opt      | applications |
+
+Example:
+
+bash
+/var/log/app.log
+
+
+ Volkswagen logs mostly stored in `/var/log`.
+
+---
+
+ 8️⃣ LINKS — ln and ln -s
+
+ Hard link
+
+bash
+ln file1 file2
+
+
+ Soft link (shortcut)
+
+bash
+ln -s file1 shortcut
+
+
+Used during deployments.
+
+---
+
+ 9️⃣ COMPRESSION COMMANDS
+
+ gzip / gunzip
+
+bash
+gzip file.txt
+gunzip file.txt.gz
+
+
+ zip / unzip
+
+bash
+zip data.zip file.txt
+unzip data.zip
+
+
+ tar (very important)
+
+bash
+tar -cvf backup.tar folder
+tar -xvf backup.tar
+
+
+Most application deployments use tar.
+
+---
+
+ 🔟 FILE PERMISSIONS
+
+Example:
+
+bash
+-rwxr-xr--
+
+
+| Position | Meaning |
+
+| r        | read    |
+| w        | write   |
+| x        | execute |
+
+ User Types
+
+ Owner
+ Group
+ Others
+
+---
+
+ 1️⃣1️⃣ chmod — change permissions
+
+ Numeric method
+
+bash
+chmod 755 script.sh
+
+
+| Number | Permission |
+| ------ | ---------- |
+| 7      | rwx        |
+| 6      | rw-        |
+| 5      | r-x        |
+| 4      | r--        |
+
+---
+
+ 1️⃣2️⃣ ACCESS CONTROL LIST (ACL)
+
+Used when normal permission is not enough.
+
+ View ACL
+
+bash
+getfacl file.txt
+
+
+ Set ACL
+
+bash
+setfacl -m u:john:rw file.txt
+
+
+Used in corporate servers where multiple teams access same files.
+
+---
+
+ 1️⃣3️⃣ chown — change owner
+
+bash
+chown user file.txt
+
+
+---
+
+ 1️⃣4️⃣ chgrp — change group
+
+bash
+chgrp devteam file.txt
+
+
+---
+
+ 🚗 VOLKSWAGEN CORPORATE REAL-TIME USE CASE
+
+ Scenario:
+
+Application logs failing.
+
+Engineer runs:
+
+bash
+cd /var/log
+ls
+tail -f app.log
+grep ERROR app.log
+
+
+Fix permissions:
+
+bash
+chmod 755 script.sh
+chown appuser script.sh
+
+
+Compress logs:
+
+bash
+tar -cvf logs_backup.tar .log
+
+
+ This is exact real production work.
+
+---
+
+
+✔ Unix is mandatory for backend engineers
+✔ Commands are used daily in production
+✔ Logs, permissions & file handling are most important
+✔ Confidence comes from practice

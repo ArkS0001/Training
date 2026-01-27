@@ -1,0 +1,257 @@
+ UNIX COMMANDS 
+
+ 🔹 1️⃣ `pwd`
+
+ ✅ Full form:
+
+P W D → Present Working Directory
+
+  Meaning:
+
+Shows where you are currently located in the system.
+
+ Example:
+pwd
+ Output:
+/home/sari
+ Explanation:
+
+ You are inside home directory of user sari
+ Every Unix user starts here after login
+
+ Easy line to say:
+
+> “pwd tells your current location.”
+
+---
+
+ 🔹 2️⃣ `ls`
+
+ ✅ Full form:
+
+L S → List Segments
+(commonly explained as List files)
+
+  Meaning:
+
+Displays files and folders present in current directory.
+
+ Command:
+ls
+ Output:
+nikto_report.txt
+
+Meaning:
+
+ One file exists in that folder
+
+ Easy line:
+
+> “ls shows what is inside the folder.”
+
+---
+
+ 🔹 3️⃣ `mkdir`
+
+ ✅ Full form:
+
+M K D I R → Make Directory
+
+  Meaning:
+
+Creates a new folder.
+
+ Command:
+mkdir unix_training
+ Result:
+
+ Folder named `unix_training` created
+
+ No output = success.
+
+ Easy line:
+
+> “mkdir creates a folder.”
+
+---
+
+ 🔹 4️⃣ `cd`
+
+ ✅ Full form:
+
+C D → Change Directory
+
+  Meaning:
+
+Moves from one folder to another.
+
+ Command:
+
+cd unix_training
+
+
+ Result:
+
+You entered inside the folder.
+
+Prompt changed to:
+
+
+~/unix_training
+
+
+ Easy line:
+
+> “cd is used to go inside a folder.”
+
+---
+
+ 🔹 5️⃣ `touch`
+
+ ✅ Meaning:
+
+Creates an empty file.
+
+(No official full form — used to “touch” file timestamp)
+
+ Command:
+
+
+touch test.txt
+
+
+ Result:
+
+ File created successfully
+
+ Easy line:
+
+> “touch creates a file.”
+
+---
+
+ 🔹 6️⃣ `echo`
+
+ ✅ Meaning:
+
+Prints text on screen or into a file.
+
+ Command:
+echo "Hello Volkswagen"
+
+Would print:
+Hello Volkswagen
+
+
+---
+
+ 🔹 7️⃣ `>>` (very important)
+
+ ✅ Meaning:
+
+Append operator
+
+ Adds data at the end of file
+ Does NOT remove old data
+
+ Command:
+
+
+echo "Hello Volkswagen" >> test.txt
+
+
+Meaning:
+
+> Write text inside file.
+
+ Easy line:
+
+> “>> means add inside file.”
+
+---
+
+ 🔹 8️⃣ `cat`
+
+ ✅ Full form:
+
+C A T → Concatenate
+
+  Meaning:
+
+Displays file content.
+
+ Command:
+
+
+cat test.txt
+
+
+ Output:
+
+
+Hello Volkswagen
+
+
+ Easy line:
+
+> “cat is used to read a file.”
+
+---
+
+ 🔹 PROMPT EXPLANATION 
+You see:
+
+
+┌──(sari㉿DESKTOP-CQEJB26)-[~/unix_training]
+└─$
+
+
+Let’s decode this 👇
+
+| Part            | Meaning        |
+| --------------- | -------------- |
+| sari            | Username       |
+| DESKTOP-CQEJB26 | System name    |
+| ~               | Home directory |
+| unix_training   | Current folder |
+| $               | Normal user    |
+
+ `~` = `/home/sari`
+
+So:
+
+
+~/unix_training
+means
+/home/sari/unix_training
+
+
+---
+
+  GOLDEN UNIX RULE 
+
+> “Whatever directory appears in the prompt
+> is where your command will execute.”
+
+This is the most important Unix concept.
+
+---
+
+ ✅ FINAL SUMMARY (FOR FRESHERS)
+
+| Command | Full Form                 | Use               |
+
+| pwd     | Present Working Directory | Show current path |
+| ls      | List files                | Show files        |
+| mkdir   | Make Directory            | Create folder     |
+| cd      | Change Directory          | Move folder       |
+| touch   | —                         | Create file       |
+| echo    | —                         | Write text        |
+| >>      | Append                    | Add data          |
+| cat     | Concatenate               | Read file         |
+
+
+
+> “If you know pwd, ls, cd, mkdir, touch and cat —
+> you understand 70% of Unix basics.”
+

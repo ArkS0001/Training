@@ -1,0 +1,152 @@
+“In Volkswagen, we don’t install Unix on laptops.
+We connect to Unix servers using MobaXterm via SSH.”
+
+BEST & SAFE METHOD FOR VOLKSWAGEN COMPUTERS
+
+  MobaXterm (Portable / Approved Tool)
+
+ ✅ Why MobaXterm is suitable in Volkswagen
+
+✔ No environment variables required
+✔ No admin rights needed
+✔ No PATH setting
+✔ Works on Windows corporate laptops
+✔ Used officially in many VW projects
+
+ This is THE STANDARD method in automotive companies.
+
+---
+
+ ❌ Why other methods are NOT suitable
+
+| Method   | Reason                  |
+| -------- | ----------------------- |
+| Linux VM | Admin rights needed ❌   |
+| WSL      | Environment variables ❌ |
+| Git Bash | Limited Unix commands ❌ |
+| Cygwin   | Env variables ❌         |
+| Docker   | Blocked ❌               |
+
+So don’t even mention these to freshers — it confuses them.
+
+---
+
+ ✅ FINAL RECOMMENDED SETUP (Tell in Class)
+
+> “In Volkswagen, we don’t install Unix on laptops.
+> We connect to Unix servers using MobaXterm via SSH.”
+
+This sentence alone clears 80% confusion.
+
+---
+
+ 🔹 EXACT STEP-BY-STEP (VW Approved Flow)
+
+ Step 1️⃣ Connect to VPN
+
+(Very important)
+
+
+Laptop → Volkswagen VPN → Internal Network
+
+
+Without VPN → No server access.
+
+---
+
+ Step 2️⃣ Open MobaXterm (Portable)
+
+No installation required
+Just double-click:
+
+
+MobaXterm_Personal.exe
+
+
+---
+
+ Step 3️⃣ Click Session → SSH
+
+Fill details:
+
+| Field       | Example     |
+| ----------- | ----------- |
+| Remote host | 10.20.30.40 |
+| Username    | vwuser      |
+| Port        | 22          |
+
+Click OK
+
+---
+
+ Step 4️⃣ Enter password
+
+You’ll see:
+
+
+vwuser@vw-linux01:~$
+
+
+🎉 Connected to Unix.
+
+---
+
+
+> “You don’t need to install Unix.
+> Unix already exists on Volkswagen servers.
+> Your laptop is just a remote controller.”
+
+
+
+REAL VW CORPORATE ARCHITECTURE (Simple Explanation)
+
+
+Windows Laptop
+     |
+     | (VPN)
+     |
+Unix Server (Linux)
+     |
+Backend Apps
+     |
+Databases
+
+
+
+Why we can’t set environment variables?
+
+➡ Security policy.
+
+ Why Unix is needed?
+
+➡ All backend apps run on Linux servers.
+
+Why not Windows server?
+
+➡ Linux is stable, fast, and license-free.
+
+
+
+ ✔ Use only:
+
+ MobaXterm
+ SSH
+ VPN concept
+
+
+DO NOT USE:
+
+ export PATH
+ env variables
+ bashrc
+ profile files
+  (for Day-1 freshers)
+
+ “These are advanced topics — you’ll learn later.”
+
+
+
+> “In Volkswagen, Unix knowledge is not optional.
+> Even testers and support engineers use it daily.”
+
+
